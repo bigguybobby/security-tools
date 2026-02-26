@@ -1,0 +1,247 @@
+[
+  {
+    "name": "bounty-target-scanner.sh",
+    "category": "Discovery & Reconnaissance",
+    "description": "Find high-value bug bounty programs on Immunefi/Code4rena",
+    "features": ["Filter by reward/asset/language", "Min reward threshold", "Multi-platform"],
+    "usage": "./bounty-target-scanner.sh --min-reward 100000 -o targets.md"
+  },
+  {
+    "name": "contract-scope-mapper.sh",
+    "category": "Discovery & Reconnaissance",
+    "description": "Automated contract scope analysis with slither integration",
+    "features": ["Clone, build, slither", "LoC stats", "Dependency mapping"],
+    "usage": "./contract-scope-mapper.sh <repo-url> -o scope.md"
+  },
+  {
+    "name": "audit-speedrun.sh",
+    "category": "Discovery & Reconnaissance",
+    "description": "Full protocol audit in one command - 9-step automated pipeline",
+    "features": ["End-to-end audit", "Multi-tool integration", "Progress tracking"],
+    "usage": "./audit-speedrun.sh /path/to/repo -o audit-report/"
+  },
+  {
+    "name": "reentrancy-detector.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Detect reentrancy vulnerabilities via external calls + state changes",
+    "features": ["Call pattern analysis", "State mutation tracking", "CEI pattern check"],
+    "usage": "./reentrancy-detector.sh contracts/Vault.sol"
+  },
+  {
+    "name": "permit-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Scan for EIP-2612 permit vulnerabilities (signature replay, frontrun)",
+    "features": ["Signature analysis", "Nonce tracking", "Deadline checks"],
+    "usage": "./permit-scanner.sh contracts/"
+  },
+  {
+    "name": "proxy-attack-surface.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Analyze proxy upgrade risks, storage collisions, and selfdestruct",
+    "features": ["Storage layout analysis", "Upgrade safety", "Delegatecall tracing"],
+    "usage": "./upgrade-analyzer.sh contracts/ -o upgrade-risks.md"
+  },
+  {
+    "name": "erc4626-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Vault vulnerability scanner (inflation, rounding, donate attacks)",
+    "features": ["Share manipulation", "Rounding analysis", "Inflation vectors"],
+    "usage": "./erc4626-scanner.sh contracts/Vault.sol"
+  },
+  {
+    "name": "erc4337-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Account abstraction vulnerability scanner",
+    "features": ["Validation checks", "Gas analysis", "Replay protection"],
+    "usage": "./erc4337-scanner.sh contracts/"
+  },
+  {
+    "name": "dex-amm-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "DEX/AMM vulnerability scanner (price manipulation, LP risks)",
+    "features": ["Price impact analysis", "Liquidity checks", "Swap path mapping"],
+    "usage": "./dex-amm-scanner.sh contracts/"
+  },
+  {
+    "name": "oracle-attack-analyzer.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Find oracle manipulation risks (TWAP, single source, staleness)",
+    "features": ["Price feed analysis", "Staleness detection", "Manipulation vectors"],
+    "usage": "./oracle-detector.sh contracts/PriceFeed.sol"
+  },
+  {
+    "name": "crosschain-replay-analyzer.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Cross-chain replay attack analyzer",
+    "features": ["Message verification", "Chain ID checks", "Nonce tracking"],
+    "usage": "./crosschain-replay-analyzer.sh contracts/"
+  },
+  {
+    "name": "fee-bypass-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Detect fee bypass vulnerabilities via threshold manipulation",
+    "features": ["Threshold analysis", "Fee calculation review", "Bypass vectors"],
+    "usage": "./fee-bypass-scanner.sh contracts/"
+  },
+  {
+    "name": "precision-loss-scanner.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Find rounding errors (division before multiply)",
+    "features": ["Math operation ordering", "Precision tracking", "Loss quantification"],
+    "usage": "./precision-loss-scanner.sh contracts/"
+  },
+  {
+    "name": "callback-attack-mapper.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Map callback attack vectors via external call tracing",
+    "features": ["Call graph analysis", "Callback pattern detection", "Attack surface mapping"],
+    "usage": "./callback-attack-mapper.sh contracts/"
+  },
+  {
+    "name": "mev-surface-mapper.sh",
+    "category": "Vulnerability Scanners",
+    "description": "Identify MEV opportunities (frontrun, sandwich, arb)",
+    "features": ["Transaction ordering", "Slippage analysis", "Profit vectors"],
+    "usage": "./mev-surface-mapper.sh contracts/"
+  },
+  {
+    "name": "datastore-hazard-detector.sh",
+    "category": "Vulnerability Scanners",
+    "description": "KV store vulnerability scanner (key collisions, overwrites)",
+    "features": ["Key collision detection", "Storage pattern analysis", "Access control"],
+    "usage": "./datastore-hazard-detector.sh contracts/"
+  },
+  {
+    "name": "compound-fork-checklist.sh",
+    "category": "Protocol-Specific Analyzers",
+    "description": "Compound fork analyzer (cToken, interest rate, liquidation)",
+    "features": ["Interest rate checks", "Liquidation logic", "Market params"],
+    "usage": "./compound-fork-checklist.sh contracts/"
+  },
+  {
+    "name": "uniswap-v4-hook-scanner.sh",
+    "category": "Protocol-Specific Analyzers",
+    "description": "Uniswap V4 hook vulnerability scanner",
+    "features": ["Hook safety", "Permission checks", "State manipulation"],
+    "usage": "./uniswap-v4-hook-scanner.sh contracts/"
+  },
+  {
+    "name": "lending-pool-scanner.sh",
+    "category": "Protocol-Specific Analyzers",
+    "description": "Lending pool vulnerability scanner",
+    "features": ["Collateral checks", "Liquidation logic", "Interest calculation"],
+    "usage": "./lending-pool-scanner.sh contracts/"
+  },
+  {
+    "name": "staking-reward-scanner.sh",
+    "category": "Protocol-Specific Analyzers",
+    "description": "Staking and reward distribution analyzer",
+    "features": ["Reward calculation", "Distribution fairness", "Timing attacks"],
+    "usage": "./staking-reward-scanner.sh contracts/"
+  },
+  {
+    "name": "call-graph.sh",
+    "category": "Analysis & Mapping",
+    "description": "Generate function call graph and dependency analysis",
+    "features": ["Function dependencies", "Call hierarchy", "Cross-contract calls"],
+    "usage": "./call-graph.sh contracts/ -o callgraph.md"
+  },
+  {
+    "name": "state-flow-tracker.sh",
+    "category": "Analysis & Mapping",
+    "description": "Track state mutations and write operations",
+    "features": ["State change tracking", "Mutation analysis", "Flow mapping"],
+    "usage": "./state-change-tracker.sh contracts/"
+  },
+  {
+    "name": "storage-analyzer.sh",
+    "category": "Analysis & Mapping",
+    "description": "Storage layout analysis and slot mapping",
+    "features": ["Storage slots", "Packing optimization", "Collision detection"],
+    "usage": "./storage-analyzer.sh contracts/"
+  },
+  {
+    "name": "contract-diff.sh",
+    "category": "Analysis & Mapping",
+    "description": "Version comparison for security-relevant changes",
+    "features": ["Git-based diffing", "Security impact analysis", "Upgrade safety"],
+    "usage": "./contract-diff.sh v1.0.0 v1.1.0"
+  },
+  {
+    "name": "gas-optimization-analyzer.sh",
+    "category": "Gas Optimization",
+    "description": "Identify gas hotspots and expensive operations",
+    "features": ["Gas profiling", "Optimization suggestions", "Cost analysis"],
+    "usage": "./gas-hotspot-profiler.sh contracts/"
+  },
+  {
+    "name": "immunefi-report-formatter.sh",
+    "category": "Reporting & Formatting",
+    "description": "Format findings for Immunefi submission",
+    "features": ["Template generation", "Severity validation", "Submission ready"],
+    "usage": "./immunefi-report-formatter.sh notes.md -t \"Title\" -s critical"
+  },
+  {
+    "name": "c4-formatter.sh",
+    "category": "Reporting & Formatting",
+    "description": "Code4rena contest report formatter",
+    "features": ["Contest format", "Finding numbering", "QA aggregation"],
+    "usage": "./c4-formatter.sh findings/ -o report.md"
+  },
+  {
+    "name": "sherlock-formatter.sh",
+    "category": "Reporting & Formatting",
+    "description": "Sherlock audit report formatter",
+    "features": ["Audit format", "Severity classification", "Issue tracking"],
+    "usage": "./sherlock-formatter.sh findings/ -o report.md"
+  },
+  {
+    "name": "finding-submitter.sh",
+    "category": "Reporting & Formatting",
+    "description": "Universal finding submitter (multi-platform)",
+    "features": ["Platform detection", "API integration", "Batch submission"],
+    "usage": "./finding-submitter.sh findings/ --platform immunefi"
+  },
+  {
+    "name": "defi-position-dashboard.sh",
+    "category": "DeFi Operations",
+    "description": "Multi-chain DeFi position tracker",
+    "features": ["ETH/Polygon/Arbitrum/OP", "Token balances", "LP positions"],
+    "usage": "./defi-position-dashboard.sh 0x... --chain ethereum"
+  },
+  {
+    "name": "token-approval-analyzer.sh",
+    "category": "DeFi Operations",
+    "description": "Token approval security analyzer",
+    "features": ["Approval tracking", "Risk assessment", "Revoke suggestions"],
+    "usage": "./token-approval-analyzer.sh 0x... --chain ethereum"
+  },
+  {
+    "name": "flashloan-poc-scaffold.sh",
+    "category": "Testing",
+    "description": "Flash loan PoC generator",
+    "features": ["Aave/dYdX/Balancer", "Attack templates", "Foundry integration"],
+    "usage": "./flashloan-poc-scaffold.sh --protocol aave"
+  },
+  {
+    "name": "fork-test-scaffold.sh",
+    "category": "Testing",
+    "description": "Mainnet fork test scaffold generator",
+    "features": ["Fork setup", "State manipulation", "Integration tests"],
+    "usage": "./fork-test-scaffold.sh --chain ethereum --block 12345678"
+  },
+  {
+    "name": "invariant-scaffold.sh",
+    "category": "Testing",
+    "description": "Invariant testing scaffold for Foundry",
+    "features": ["Property definitions", "Handler setup", "Fuzzing config"],
+    "usage": "./invariant-scaffold.sh contracts/Vault.sol"
+  },
+  {
+    "name": "multi-step-poc.sh",
+    "category": "Testing",
+    "description": "Multi-step exploit PoC generator",
+    "features": ["Complex attack flows", "State setup", "Verification"],
+    "usage": "./multi-step-poc.sh --vuln-type reentrancy"
+  }
+]

@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Contract Security Toolkit
 
-## Getting Started
+> 71+ Open Source Security Tools for Smart Contract Developers
 
-First, run the development server:
+A clean, professional landing page showcasing our smart contract security tools collection. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## 🚀 Features
+
+- **Landing Page**: Hero section, stats, tool categories, and CTAs
+- **Tool Index**: Searchable, filterable catalog of all 71 tools
+- **SEO Optimized**: Meta tags, Open Graph, Twitter cards, sitemap
+- **Static Export**: Deployable to Vercel, Netlify, GitHub Pages
+- **Responsive**: Mobile-first design with Tailwind CSS
+
+## 📦 Tech Stack
+
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- Lucide React (icons)
+
+## 🛠️ Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build static export
+npm run build
+
+# Preview build
+npx serve out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Deploy
+vercel --prod
+```
 
-## Learn More
+### Netlify
+```bash
+# Install Netlify CLI
+npm i -g netlify-cli
 
-To learn more about Next.js, take a look at the following resources:
+# Deploy
+netlify deploy --prod --dir=out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### GitHub Pages
+```bash
+# Build and push to gh-pages branch
+npm run build
+git add out -f
+git commit -m "Deploy to GitHub Pages"
+git subtree push --prefix out origin gh-pages
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+security-tools-site/
+├── app/
+│   ├── page.tsx           # Landing page
+│   ├── tools/
+│   │   └── page.tsx       # Tool index
+│   ├── layout.tsx         # Root layout with SEO
+│   └── globals.css        # Global styles
+├── data/
+│   └── tools.json         # Tool metadata
+├── public/
+│   ├── sitemap.xml
+│   └── robots.txt
+└── next.config.ts         # Static export config
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Tool Categories
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Discovery & Reconnaissance** (8 tools)
+- **Vulnerability Scanners** (25 tools)
+- **Protocol-Specific Analyzers** (8 tools)
+- **Analysis & Mapping** (12 tools)
+- **Reporting & Formatting** (7 tools)
+- **DeFi Operations** (6 tools)
+- **Testing** (5 tools)
+
+## 📊 SEO Features
+
+- ✅ Semantic HTML
+- ✅ Meta tags (title, description, keywords)
+- ✅ Open Graph tags
+- ✅ Twitter Card tags
+- ✅ Sitemap.xml
+- ✅ Robots.txt
+- ✅ Fast page load (static export)
+- ✅ Mobile responsive
+
+## 🔗 Links
+
+- GitHub: [bigguybobby](https://github.com/bigguybobby)
+- Tools: `~/.openclaw/workspace-hackatooner/tools/`
+
+## 📝 License
+
+MIT
+
+---
+
+Built by security researchers, for security researchers.
